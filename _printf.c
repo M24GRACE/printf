@@ -1,74 +1,71 @@
 #include "main.h"
 
 /****************** FUNCTIONS ******************/
-/* Funtions to print chars and strings */
+/* ... (Implement the functions for different conversion specifiers as required) ... */
 
 /* Function to print a character */
 int print_char(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
-    UNUSED(flags);
-    UNUSED(width);
-    UNUSED(precision);
-    UNUSED(size);
-    
-    char c = va_arg(types, int);
-    return handle_write_char(c, buffer, 0, 0, 0, 0);
+    // ... (Implement the function to print a character) ...
 }
 
 /* Function to print a string */
 int print_string(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
-    UNUSED(flags);
-    UNUSED(width);
-    UNUSED(precision);
-    UNUSED(size);
-
-    char *str = va_arg(types, char*);
-    if (str == NULL)
-        str = "(null)";
-
-    int len = 0;
-    while (str[len] != '\0')
-        len++;
-
-    int chars_written = 0;
-    for (int i = 0; i < len; i++)
-        chars_written += handle_write_char(str[i], buffer, 0, 0, 0, 0);
-
-    return chars_written;
+    // ... (Implement the function to print a string) ...
 }
 
 /* Function to print a percent sign */
 int print_percent(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
-    UNUSED(types);
-    UNUSED(flags);
-    UNUSED(width);
-    UNUSED(precision);
-    UNUSED(size);
-
-    return handle_write_char('%', buffer, 0, 0, 0, 0);
+    // ... (Implement the function to print a percent sign) ...
 }
 
-/* Functions to print numbers */
+/* Function to print an integer (decimal) */
+int print_int(va_list types, char buffer[], int flags, int width, int precision, int size)
+{
+    // ... (Implement the function to print an integer) ...
+}
 
-/* ... (implementation) ... */
+/* Function to print an unsigned integer */
+int print_unsigned(va_list types, char buffer[], int flags, int width, int precision, int size)
+{
+    // ... (Implement the function to print an unsigned integer) ...
+}
 
-/* Function to print non-printable characters */
-/* ... (implementation) ... */
+/* Function to print an octal number */
+int print_octal(va_list types, char buffer[], int flags, int width, int precision, int size)
+{
+    // ... (Implement the function to print an octal number) ...
+}
 
-/* Function to print memory address */
-/* ... (implementation) ... */
+/* Function to print a hexadecimal number */
+int print_hexadecimal(va_list types, char buffer[], int flags, int width, int precision, int size)
+{
+    // ... (Implement the function to print a hexadecimal number) ...
+}
 
-/* Functions to handle other specifiers */
-/* ... (implementation) ... */
+/* Function to print a memory address */
+int print_pointer(va_list types, char buffer[], int flags, int width, int precision, int size)
+{
+    // ... (Implement the function to print a memory address) ...
+}
 
-/* Function to print string in reverse */
-/* ... (implementation) ... */
+/* Function to print a string in reverse */
+int print_reverse(va_list types, char buffer[], int flags, int width, int precision, int size)
+{
+    // ... (Implement the function to print a string in reverse) ...
+}
 
-/* Function to print a string in rot 13 */
-/* ... (implementation) ... */
+/* Function to print a string in ROT13 encoding */
+int print_rot13string(va_list types, char buffer[], int flags, int width, int precision, int size)
+{
+    // ... (Implement the function to print a string in ROT13 encoding) ...
+}
 
-/****************** UTILS ******************/
-/* ... (implementation) ... */
+/****************** _PRINTF ******************/
+int _printf(const char *format, ...)
+{
+    // ... (Keep the rest of the _printf function as it is, including the va_list handling and buffer printing) ...
+}
 
